@@ -17,11 +17,12 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.29.0'
+          flutter-version: '3.38.5'
 
       - name: Install dependencies
         run: flutter pub get
 
+      # Do not fail CI on lint warnings
       - name: Run Flutter analyze
         run: flutter analyze || true
 
